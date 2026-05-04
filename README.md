@@ -1,1 +1,17 @@
-Flight Price Analysis & Data Cleaning📊 Project OverviewThis project focuses on the end-to-end data cleaning and preparation of a flight dataset containing 15,000 records. The primary objective is to transform raw, messy aviation data into a structured format optimized for SQL databases and Power BI visualizations.  The analysis is performed within the Flight_data.ipynb notebook, utilizing Python and the Pandas library.  🛠️ Data Cleaning WorkflowThe following transformations were implemented in Flight_data.ipynb to ensure data integrity:  Temporal Standardization: Converted date_of_journey into datetime objects and extracted day and month features for time-series analysis.  Stops Categorization: Cleaned the Total_stops field by replacing "non-stop" with 0 and extracting numeric values from string data.  Duration Processing: Engineered a custom function to convert the Duration string (e.g., "3h 15min") into a total numeric value of duration_total_mins.  Text Normalization: Standardized Additional_info by converting to lowercase and handling "No info" as "none" for consistent categorical grouping.  Feature Selection: Dropped redundant columns like the original Duration and index to streamline the final dataset for reporting.  📂 Repository StructureFileDescriptionFlight_data.ipynbThe core Jupyter Notebook containing all Python cleaning logic and analysis.  flights.csvThe raw input dataset containing original flight logs and pricing.  cleaned_flights.csvThe final, processed output ready for SQL injection or Power BI.  🚀 Getting StartedPrerequisitesPython 3.xPandas LibraryExecutionClone this repository to your local machine.Open Flight_data.ipynb in a Jupyter environment.  Execute the cells to process the raw flights.csv and generate the cleaned output.  📈 Key InsightsBy preparing the data in this manner, the project enables analysis on:Price Trends: How flight costs fluctuate based on the month and day of travel.  Carrier Efficiency: Relationship between the number of stops and total flight duration.  Route Popularity: Identifying the most frequent flight paths and their associated costs. # Flight-Analytics-Project
+Flight Price Prediction: Data Cleaning & Preprocessing📊 
+Project Overview:-This project involves the comprehensive cleaning and feature engineering of a flight dataset containing 15,000 records. The primary goal was to transform raw aviation data into a structured, numerical format optimized for SQL databases and Power BI visualization.  The entire transformation logic is documented and executed within the Flight_data.ipynb Jupyter Notebook. 
+
+Data Cleaning Steps
+The following technical workflows were implemented in Flight_data.ipynb:  
+
+Date Normalization: Converted the date_of_journey column into a standard datetime format.  
+
+Time-Series Feature Extraction: Extracted specific day and month columns from the journey date to identify seasonal trends.  
+
+Categorical Encoding: Cleaned the Total_stops column by replacing "non-stop" with 0 and extracting integers from strings like "2 stops".  
+
+Time Transformation: Engineered a custom Python function to convert the Duration string (e.g., "3h 15min") into a total numerical value of duration_total_mins.  
+
+Text Cleaning: Standardized the Additional_info column by converting to lowercase, stripping whitespace, and consolidating "no info" values into "none".  
+
+Dimensionality Reduction: Dropped redundant columns such as the original Duration and index to optimize storage and processing speed.
